@@ -745,7 +745,7 @@ Content-Type: application/json
 - 任何用户（包括未登录用户）都可以查看歌单的基本信息
 - 返回的歌单信息包含 `userId` 字段，可以识别歌单的创建者
 
-### 2. 获取歌单音乐列表
+### 3. 创建歌单
 
 **端点:** `POST /api/user/playlist/create`
 
@@ -791,7 +791,7 @@ Content-Type: application/json
 }
 ```
 
-### 2. 获取歌单列表
+### 4. 获取歌单列表
 
 **端点:** `GET /api/user/playlists`
 
@@ -827,7 +827,7 @@ Authorization: <token>
 - 如果要查看其他用户的歌单，请使用 `GET /api/playlist/{id}` API
 - 歌单按创建时间倒序排列（最新的在前面）
 
-### 3. 更新歌单
+### 5. 更新歌单
 
 **端点:** `POST /api/user/playlist/update`
 
@@ -884,7 +884,7 @@ Content-Type: application/json
 
 **说明:** 只有歌单的创建者（user_id 匹配）才能更新歌单信息。
 
-### 4. 删除歌单
+### 6. 删除歌单
 
 **端点:** `POST /api/user/playlist/delete`
 
@@ -922,7 +922,7 @@ Content-Type: application/json
 - 删除歌单会级联删除 `playlist_music` 表中的所有关联记录
 - 此操作不可恢复
 
-### 5. 获取歌单音乐列表
+### 7. 获取歌单音乐列表
 
 **端点:** `GET /api/user/playlist/music/{playlistId}`
 
@@ -973,7 +973,7 @@ Authorization: <token>
 - 此 API **无需登录**即可访问（后端已移除 token 验证）
 - 任何用户（包括未登录用户）都可以查看歌单内容
 
-### 6. 添加音乐到歌单
+### 8. 添加音乐到歌单
 
 **端点:** `POST /api/user/playlist/music/add`
 
@@ -1021,7 +1021,7 @@ Content-Type: application/json
 - 音乐会自动添加到歌单**最上面**（position = 1，其他音乐position + 1）
 - 添加成功后会自动更新歌单的 `musicCount` 字段
 
-### 7. 从歌单中移除音乐
+### 9. 从歌单中移除音乐
 
 **端点:** `POST /api/user/playlist/music/remove`
 
