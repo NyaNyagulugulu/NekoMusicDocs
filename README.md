@@ -1268,6 +1268,76 @@ async function getMusicRanking(limit = 200) {
 }
 ```
 
+### 7. 获取最新上传音乐
+
+**端点:** `GET /api/music/latest?t={时间戳}`
+
+**无需登录**
+
+**查询参数:**
+- `limit`: 返回数量（可选，默认为 300，最大为 500）
+- `t`: 时间戳（可选，用于避免 CDN 缓存）
+
+**响应示例:**
+```json
+{
+  "success": true,
+  "message": "获取最新音乐成功",
+  "data": [
+    {
+      "id": 1,
+      "title": "歌曲标题",
+      "artist": "艺术家",
+      "album": "专辑",
+      "duration": 180,
+      "coverPath": "/path/to/cover.jpg",
+      "coverUrl": "/path/to/cover.jpg",
+      "language": "中文",
+      "tags": "流行",
+      "fileFormat": "mp3",
+      "createdAt": 1704067200000
+    }
+  ]
+}
+```
+
+**说明:**
+- 此 API **无需登录**即可访问
+- 返回按上传时间从新到旧排序的音乐列表
+- 默认返回最新 300 首音乐，最多支持返回 500 首
+- 每首音乐包含：
+  - id, title, artist, album, duration
+  - coverPath: 封面文件路径
+  - coverUrl: 封面访问 URL（如果封面不存在则为默认图标）
+  - language: 语言
+  - tags: 标签
+  - fileFormat: 音频文件格式（mp3/flac/wav）
+  - createdAt: 创建时间（Unix 时间戳，毫秒）
+
+**使用场景:**
+- 首页展示最新上线的音乐
+- 新歌速递页面
+- 推荐最新上传的音乐给用户
+
+**前端集成示例:**
+```javascript
+async function getLatestMusic(limit = 300) {
+  const timestamp = Date.now(); // 添加时间戳避免 CDN 缓存
+  const response = await fetch(`https://music.cnmsb.xin/api/music/latest?limit=${limit}&t=${timestamp}`, {
+    method: 'GET'
+  });
+
+  const data = await response.json();
+  if (data.success) {
+    console.log(`获取到 ${data.data.length} 首最新音乐:`, data.data);
+    // data.data 是一个数组，包含按上传时间排序的音乐
+  } else {
+    console.error('获取最新音乐失败:', data.message);
+  }
+  return data;
+}
+```
+
 ---
 
 ## 错误码说明
