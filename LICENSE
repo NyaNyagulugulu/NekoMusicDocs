@@ -31,7 +31,11 @@ All public programs utilizing this API must permanently and prominently display 
 3. Anti-Impersonation:
 It is strictly prohibited to claim that the program is an independent original work without prior written authorization from the original Author. Removing or obscuring the "Neko Music" brand identity, or renaming the program to a misleading name (e.g., "XX Music" without stating the source) is strictly forbidden.
 
-Any violation of the aforementioned attribution requirements, source disclosure obligations, or copyleft obligations shall result in the automatic termination of the license granted under this agreement.
+4. Multi-language Support (i18n Requirements):
+Any public-facing program utilizing this API must support at least two languages to ensure accessibility: Chinese and English. The user interface must provide a clear method for users to switch between these languages.
+
+5. Termination of License:
+Any violation of the aforementioned attribution requirements, source disclosure obligations, copyleft obligations, or i18n requirements shall result in the automatic termination of the license granted under this agreement.
 ===============================================================================
 
                     GNU AFFERO GENERAL PUBLIC LICENSE
