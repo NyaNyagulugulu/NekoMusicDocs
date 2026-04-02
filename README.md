@@ -1,8 +1,10 @@
 # Neko云音乐 API 文档
 
+English Documentation: [English API doc.md](README-EN.md)
+
 ### 使用本 API 需遵守本项目 LICENSE 协议，必须开源并保留 Neko云音乐 署名及源码链接！
 
-#### 更新时间 2026年3月7日
+#### 更新时间 2026年4月2日
 ## 概述
 
 Neko云音乐提供完整的 RESTful API，支持音乐搜索、播放、用户认证、收藏等功能。所有 API 都基于 HTTP/HTTPS 协议，使用 JSON 格式进行数据交换。
