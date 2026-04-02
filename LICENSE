@@ -16,6 +16,23 @@
 
 任何违反上述署名要求、源码公示义务或开源义务的行为，将导致本许可协议授权自动终止。
 ===============================================================================
+【Additional Terms】
+In accordance with Section 7 of the GNU Affero General Public License, version 3 (AGPLv3), the Author hereby asserts the following additional permissions and restrictions:
+
+1. Copyleft Enforcement:
+Any program (including but not limited to Web applications, Mobile Apps, Mini-programs, Desktop clients, and Backend services) that interacts with, invokes, or is developed based on this API documentation must, if it provides services to the public over a network, make its complete source code available to all users under the same or a more restrictive open-source license (AGPL-3.0 is strongly recommended).
+
+2. Attribution & Source Disclosure:
+All public programs utilizing this API must permanently and prominently display the following information within their user interface (e.g., "About" page, sidebar, footer, or console startup message):
+    (A) Attribution: "Powered by Neko Music API";
+    (B) Source Code Link: A direct and functional hyperlink to the program's own public source code repository (e.g., GitHub);
+    (C) Documentation Reference: A link to the original API documentation: https://github.com/NyaNyagulugulu/NekoMusicDocs
+
+3. Anti-Impersonation:
+It is strictly prohibited to claim that the program is an independent original work without prior written authorization from the original Author. Removing or obscuring the "Neko Music" brand identity, or renaming the program to a misleading name (e.g., "XX Music" without stating the source) is strictly forbidden.
+
+Any violation of the aforementioned attribution requirements, source disclosure obligations, or copyleft obligations shall result in the automatic termination of the license granted under this agreement.
+===============================================================================
 
                     GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
