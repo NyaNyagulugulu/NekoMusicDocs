@@ -4,7 +4,7 @@ Chinese Documentation: [中文 API 文档](README.md)
 
 ### Using this API requires compliance with this project's LICENSE agreement. You must open source and retain the Neko Music attribution and source code link!
 
-#### Last Updated: April 2, 2026
+#### Last Updated(yyyy/mm/dd): 2026/4/7
 
 ## Overview
 
@@ -403,7 +403,7 @@ Content-Type: multipart/form-data
 - `album`: Album name (optional)
 - `tags`: Tags (optional)
 - `duration`: Music duration in seconds (required)
-- `uploadUserId`: Uploader user ID (usually 0)
+- `uploadUserId`: Uploader user ID (required)
 - `musicFile`: Music file (required, multipart/form-data)
   - Supported formats: MP3, FLAC, WAV
 - `coverFile`: Cover image file (optional, multipart/form-data)
