@@ -494,7 +494,7 @@ formData.append('lyricsFile', lyricsFileObject); // 可选
 uploadMusic(formData);
 ```
 
-### 9. 修改用户密码
+### 14. 修改用户密码
 
 **端点:** `POST /api/user/password/change`
 
@@ -543,7 +543,7 @@ Content-Type: application/json
 }
 ```
 
-### 10. 获取用户上传审核通过的音乐
+### 15. 获取用户上传审核通过的音乐
 
 **端点:** `GET /api/user/uploaded-music`
 
